@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+
+</head>
+<body>
+
+    <h2 align="left">Student Registration Form</h2>
+
+    <form>
+
+        <label>Full Name:</label>
+        <input type="text" placeholder="Enter your name" required><br>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required><br>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter password" required><br>
+
+        <label>Phone Number:</label>
+        <input type="tel" placeholder="Enter mobile number"><br>
+
+        <label>Date of Birth:</label>
+        <input type="date"><br>
+
+        <label>Gender:</label>
+        <div class="gender">
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+
+        <br><br>
+
+        <label>Course:</label>
+        <select>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>React</option>
+        </select><br>
+
+        <label>Address:</label>
+        <textarea rows="4" placeholder="Enter address"></textarea><br>
+
+
+        <label>
+            <input type="checkbox">
+            I agree to the Terms and Conditions
+        </label>
+
+        <br><br>
+
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+</html>
