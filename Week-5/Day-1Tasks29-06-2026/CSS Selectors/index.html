@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+
+    <style>
+
+        /* Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+            margin: 5px;
+        }
+
+        /* Element Selector */
+        h2 {
+            color: blue;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: yellow;
+            color: red;
+        }
+
+        /* ID Selector */
+        #title {
+            color: green;
+            text-align: center;
+        }
+
+        /* Group Selector */
+        h3, h4 {
+            color: purple;
+        }
+
+        /* Descendant Selector */
+        .container p {
+            color: darkblue;
+        }
+
+        /* Child Selector */
+        .parent > p {
+            color: orange;
+            font-weight: bold;
+        }
+
+        /* Adjacent Sibling Selector */
+        h5 + p {
+            color: brown;
+        }
+
+        /*General Sibling Selector */
+        h6 ~ p {
+            color: crimson;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ID Selector -->
+    <h1 id="title">CSS Selectors Example</h1>
+
+    <!-- Element Selector -->
+    <h2>Element Selector</h2>
+    <p>This paragraph is normal.</p>
+
+    <!-- Class Selector -->
+    <h2 class="highlight">Class Selector Example</h2>
+    <p class="highlight">This paragraph uses a class selector.</p>
+
+    <!-- Group Selector -->
+    <h3>Group Selector - Heading 3</h3>
+    <h4>Group Selector - Heading 4</h4>
+
+    <!-- Descendant Selector -->
+    <div class="container">
+        <h2>Descendant Selector</h2>
+        <p>This paragraph is inside the container.</p>
+        <section>
+            <p>This paragraph is also inside the container.</p>
+        </section>
+    </div>
+
+    <!-- Child Selector -->
+    <div class="parent">
+        <h2>Child Selector</h2>
+        <p>Direct child paragraph.</p>
+
+        <div>
+            <p>This paragraph is NOT a direct child.</p>
+        </div>
+    </div>
+
+    <!-- Adjacent Sibling Selector -->
+    <h5>Adjacent Sibling Selector</h5>
+    <p>This paragraph comes immediately after h5.</p>
+    <p>This paragraph is not selected.</p>
+
+    <!-- General Sibling Selector -->
+    <h6>General Sibling Selector</h6>
+    <p>Paragraph 1 after h6.</p>
+    <p>Paragraph 2 after h6.</p>
+    <p>Paragraph 3 after h6.</p>
+
+</body>
+</html>
