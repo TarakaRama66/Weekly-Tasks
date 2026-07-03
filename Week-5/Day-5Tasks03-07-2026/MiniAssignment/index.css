@@ -1,0 +1,147 @@
+/* Universal Selector */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* Element selector */
+body{
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+    color:#333;
+}
+/* Id selector */
+#logo{
+    color:white;
+}
+/* Class selector */
+.title{
+    text-align:center;
+    margin:30px 0;
+}
+/* Header */
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#003366;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+/* Navigation */
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+.nav-links li{
+    margin-left:20px;
+}
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    padding:8px;
+}
+.nav-links a:hover{
+    background:white;
+    color:#003366;
+    border-radius:5px;
+}
+/* Hero */
+.hero{
+    background:linear-gradient(#1e90ff,#87cefa);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+.hero button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:white;
+    color:#003366;
+    cursor:pointer;
+}
+.hero button:hover{
+    background:#003366;
+    color:white;
+}
+/* Flexbox */
+.service-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+}
+/* Box Model */
+.card{
+    background:white;
+    width:300px;
+    padding:20px;
+    margin:10px;
+    border:2px solid #1e90ff;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+    text-align:center;
+}
+/* Grid */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:30px;
+}
+.project{
+    background:#1e90ff;
+    color:white;
+    padding:50px;
+    text-align:center;
+    border-radius:10px;
+}
+/* Form */
+form{
+    width:60%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+input,textarea{
+    padding:12px;
+    margin:10px 0;
+    border:1px solid gray;
+}
+button{
+    padding:12px;
+    background:#003366;
+    color:white;
+    border:none;
+}
+/* Footer */
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+/* Media query */
+@media(max-width:768px){
+.header{
+    flex-direction:column;
+}
+.nav-links{
+    flex-direction:column;
+    margin-top:15px;
+}
+.service-container{
+    flex-direction:column;
+    align-items:center;
+}
+.project-grid{
+    grid-template-columns:1fr;
+}
+form{
+    width:90%;
+}
+}
