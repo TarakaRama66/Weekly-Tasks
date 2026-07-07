@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Tables Demo</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Tables Example</h1>
+
+    <!-- Basic Table -->
+    <h2>Student Details</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Gupta</td>
+            <td>HTML</td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Ravi</td>
+            <td>CSS</td>
+        </tr>
+
+        <tr>
+            <td>103</td>
+            <td>Sai</td>
+            <td>JavaScript</td>
+        </tr>
+    </table>
+
+    <!-- Colspan Example -->
+    <h2>Student Report (Colspan)</h2>
+
+    <table>
+        <tr>
+            <th colspan="3">Student Report Card</th>
+        </tr>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Gupta</td>
+            <td>95</td>
+        </tr>
+    </table>
+
+    <!-- Rowspan Example -->
+    <h2>Subjects (Rowspan)</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+        </tr>
+
+        <tr>
+            <td rowspan="3">Gupta</td>
+            <td>HTML</td>
+        </tr>
+
+        <tr>
+            <td>CSS</td>
+        </tr>
+
+        <tr>
+            <td>JavaScript</td>
+        </tr>
+    </table>
+
+    <!-- Employee Table -->
+    <h2>Employee Details</h2>
+
+    <table>
+        <tr>
+            <th>Emp ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+
+        <tr>
+            <td>1001</td>
+            <td>John</td>
+            <td>IT</td>
+            <td>50000</td>
+        </tr>
+
+        <tr>
+            <td>1002</td>
+            <td>David</td>
+            <td>HR</td>
+            <td>45000</td>
+        </tr>
+
+        <tr>
+            <td>1003</td>
+            <td>Smith</td>
+            <td>Finance</td>
+            <td>55000</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grid Layout</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "sidebar main extra"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 10px;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+/* Common Styles */
+.grid-container > div {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+/* Individual Sections */
+.header {
+    grid-area: header;
+    background-color: green;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: black;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: black;
+}
+
+.main {
+    grid-area: main;
+    background-color: black;
+}
+
+.extra {
+    grid-area: extra;
+    background-color: black;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: green;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "sidebar"
+            "extra"
+            "footer";
+
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="grid-container">
+
+    <div class="header">
+        Header
+    </div>
+
+    <div class="nav">
+        Navigation Menu
+    </div>
+
+    <div class="sidebar">
+        Sidebar
+    </div>
+
+    <div class="main">
+        Main Content
+    </div>
+
+    <div class="extra">
+        Extra Content
+    </div>
+
+    <div class="footer">
+        Footer
+    </div>
+
+</div>
+
+</body>
+</html>

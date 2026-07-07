@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Practice</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.container{
+    display:grid;
+    /* Grid Layout */
+    grid-template-columns:200px 1fr 1fr;
+    grid-template-rows:80px 200px 80px;
+    /* Space between items */
+    gap:15px;
+    /* Horizontal alignment */
+    justify-items:center;
+    /* Vertical alignment */
+    align-items:center;
+    /* Shorthand for justify-items + align-items */
+    /* place-items:center; */
+    background:#ddd;
+    padding:20px;
+}
+.item{
+    background:steelblue;
+    color:white;
+    font-size:22px;
+    width:100px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* Header spans all columns */
+.header{
+    background:tomato;
+    grid-column:1/4;
+}
+/* Sidebar spans two rows */
+.sidebar{
+    background:green;
+    grid-row:2/4;
+}
+/* Main content */
+.content{
+    background:royalblue;
+}
+/* Extra content */
+.box{
+    background:purple;
+}
+/* Footer */
+.footer{
+    background:orange;
+    grid-column:2/4;
+}
+/* Responsive */
+@media (max-width:768px){
+.container{
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+}
+.header,
+.sidebar,
+.content,
+.box,
+.footer{
+    grid-column:auto;
+    grid-row:auto;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="item header">Header</div>
+<div class="item sidebar">Sidebar</div>
+<div class="item content">Content</div>
+<div class="item box">Box</div>
+<div class="item footer">Footer</div>
+</div>
+</body>
+</html>

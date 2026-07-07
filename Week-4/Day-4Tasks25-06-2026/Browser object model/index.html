@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Browser Object Model</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        margin:30px;
+    }
+
+    h2{
+        color:darkblue;
+    }
+
+    button{
+        padding:10px 15px;
+        margin:5px;
+        cursor:pointer;
+    }
+
+    #output{
+        margin-top:20px;
+        border:2px solid black;
+        padding:15px;
+        width:500px;
+        min-height:150px;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>Browser Object Model (BOM)</h2>
+<button onclick="windowInfo()">Window</button>
+<button onclick="navigatorInfo()">Navigator</button>
+<button onclick="locationInfo()">Location</button>
+<button onclick="historyInfo()">History</button>
+<div id="output">
+    Click any button to view information.
+</div>
+
+<script src="./index.js"></script>
+
+</body>
+</html>

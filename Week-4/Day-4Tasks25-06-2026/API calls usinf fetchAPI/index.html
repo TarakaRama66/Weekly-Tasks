@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API calls using fetchAPI</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:30px;
+        }
+
+        h2{
+            color:darkblue;
+        }
+
+        button{
+            padding:10px 15px;
+            margin:5px;
+            cursor:pointer;
+        }
+
+        #output{
+            margin-top:20px;
+            border:2px solid black;
+            padding:15px;
+            width:600px;
+            min-height:200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Fetch API Example</h2>
+    <button onclick="getUsers()">GET Users</button>
+    <button onclick="addUser()">POST User</button>
+    <button onclick="updateUser()">PUT User</button>
+    <button onclick="deleteUser()">DELETE User</button>
+    <div id="output">
+        Click any button to perform an API request.
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
