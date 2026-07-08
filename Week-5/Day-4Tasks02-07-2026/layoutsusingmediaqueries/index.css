@@ -1,0 +1,39 @@
+/* Default (Desktop) */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background: blueviolet;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 24px;
+}
+
+/* Laptop 992px and below */
+@media (max-width: 992px) {
+    .container {
+        background: orangered;
+        font-size: 22px;
+    }
+}
+
+/* Tablet 768px and below */
+@media (max-width: 768px) {
+    .container {
+        background: brown;
+        font-size: 20px;
+        padding: 30px;
+    }
+}
+
+/* Mobile 576px and below */
+@media (max-width: 576px) {
+    .container {
+        background: green;
+        font-size: 18px;
+        padding: 20px;
+    }
+}

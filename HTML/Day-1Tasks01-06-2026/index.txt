@@ -1,0 +1,17 @@
+Purpose of Using Software:
+Software helps users perform tasks efficiently, automate processes, manage data, improve productivity, and solve real-world business problems.
+
+SDLC (Software Development Life Cycle):
+A structured process used to develop software through phases like Requirement Gathering, Planning, Design, Development, Testing, Deployment, and Maintenance.
+
+HTML Introduction:
+HTML (HyperText Markup Language) is the standard markup language used to create and structure web pages using elements and tags.
+
+Browser Engine:
+A browser engine interprets HTML, CSS, and JavaScript to render web pages. Examples include Blink (Chrome), Gecko (Firefox), and WebKit (Safari).
+
+DOM (Document Object Model):
+The DOM represents an HTML document as a tree structure, allowing JavaScript to access, modify, add, or remove elements dynamically.
+
+About an Application:
+An application is software designed to perform specific tasks for users, such as web applications, mobile apps, desktop applications, or enterprise systems.
