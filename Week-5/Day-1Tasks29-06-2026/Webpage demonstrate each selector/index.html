@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+
+    <style>
+        /* Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        /*  Element Selector */
+        h2 {
+            color: blue;
+        }
+
+        /*  Class Selector */
+        .highlight {
+            background-color: yellow;
+            color: red;
+        }
+
+        /* ID Selector */
+        #main-title {
+            color: green;
+            text-align: center;
+        }
+
+        /*Group Selector */
+        h3, h4 {
+            color: purple;
+        }
+
+        /*Descendant Selector */
+        .box p {
+            color: darkblue;
+        }
+
+        /* Child Selector */
+        .parent > p {
+            color: orange;
+            font-weight: bold;
+        }
+
+        /*Adjacent Sibling Selector */
+        h5 + p {
+            color: brown;
+        }
+
+        /* General Sibling Selector */
+        h6 ~ p {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">CSS Selectors Demonstration</h1>
+
+    <hr>
+
+    <h2>1. Element Selector</h2>
+    <p>The heading above is styled using the element selector.</p>
+
+    <hr>
+
+    <h2>2. Class Selector</h2>
+    <p class="highlight">This paragraph uses the class selector.</p>
+
+    <hr>
+
+    <h2>3. ID Selector</h2>
+    <p>The main heading at the top uses an ID selector.</p>
+
+    <hr>
+
+    <h3>4. Group Selector</h3>
+    <h4>Both headings have the same style.</h4>
+
+    <hr>
+
+    <div class="box">
+        <h2>5. Descendant Selector</h2>
+        <p>This paragraph is inside the div.</p>
+        <section>
+            <p>This paragraph is also inside the div.</p>
+        </section>
+    </div>
+
+    <p>This paragraph is outside the div.</p>
+
+    <hr>
+
+    <div class="parent">
+        <h2>6. Child Selector</h2>
+        <p>This is a direct child paragraph.</p>
+
+        <div>
+            <p>This paragraph is not a direct child.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h5>7. Adjacent Sibling Selector</h5>
+    <p>This paragraph is immediately after h5.</p>
+    <p>This paragraph is not selected.</p>
+
+    <hr>
+
+    <h6>8. General Sibling Selector</h6>
+    <p>Paragraph One</p>
+    <p>Paragraph Two</p>
+    <p>Paragraph Three</p>
+
+</body>
+</html>

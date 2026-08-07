@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flexbox Responsive Layout</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR (Flex container) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: lightblue;
+    text-align: center;
+    font-size: 24px;
+}
+/* CARD LAYOUT (Flexbox grid) */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background: #f4f4f4;
+    border: 2px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* SIDEBAR + CONTENT LAYOUT */
+.layout {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background: lightgreen;
+    padding: 15px;
+}
+
+.content {
+    flex: 3;
+    background: lightcoral;
+    padding: 15px;
+}
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>My Website</h2>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    Welcome to Flexbox Responsive Layout
+</div>
+
+<!-- CARDS -->
+<div class="container">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+</div>
+
+<!-- SIDEBAR + CONTENT -->
+<div class="layout">
+    <div class="sidebar">
+        Sidebar Content
+    </div>
+
+    <div class="content">
+        Main Content Area using Flexbox layout. This section takes more space than sidebar.
+    </div>
+</div>
+
+</body>
+</html>

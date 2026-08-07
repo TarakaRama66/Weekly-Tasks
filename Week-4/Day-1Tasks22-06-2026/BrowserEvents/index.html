@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Events</title>
+</head>
+<body>
+
+    <h2>Course Registration</h2>
+
+    <form id="registrationForm">
+
+        <!-- Input Event -->
+        <label>Name:</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+        >
+        <p id="typingMsg"></p>
+
+        <br><br>
+
+        <!-- Change Event -->
+        <label>Select Course:</label>
+        <select id="course">
+            <option value="">Choose Course</option>
+            <option>JavaScript</option>
+            <option>React</option>
+            <option>Node.js</option>
+        </select>
+
+        <p id="courseMsg"></p>
+
+        <br>
+
+        <!-- Click Event -->
+        <button type="button" id="previewBtn">
+            Preview Details
+        </button>
+
+        <br>
+
+        <!-- Submit Event -->
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+    <script>
+
+        const nameInput = document.getElementById("name");
+        const course = document.getElementById("course");
+        const previewBtn = document.getElementById("previewBtn");
+        const form = document.getElementById("registrationForm");
+
+        const typingMsg = document.getElementById("typingMsg");
+        const courseMsg = document.getElementById("courseMsg");
+
+        // INPUT EVENT
+        nameInput.addEventListener("input", () => {
+            typingMsg.textContent =
+                `Typing: ${nameInput.value}`;
+        });
+
+        // CHANGE EVENT
+        course.addEventListener("change", () => {
+            courseMsg.textContent =
+                `Selected Course: ${course.value}`;
+        });
+
+        // CLICK EVENT
+        previewBtn.addEventListener("click", () => {
+
+            alert(
+                `Name: ${nameInput.value}
+Course: ${course.value}`
+            );
+
+        });
+
+        // SUBMIT EVENT
+        form.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+            alert(
+                `Registration Successful!
+Name: ${nameInput.value}
+Course: ${course.value}`
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>

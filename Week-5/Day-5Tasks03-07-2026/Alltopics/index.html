@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete CSS Example</title>
+
+<style>
+/* CSS Variables */
+:root{
+    --primary:#007bff;
+    --secondary:#28a745;
+    --bg:#f4f4f4;
+}
+/* Universal Selector */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* Element Selector */
+body{
+    font-family:Arial,sans-serif;
+    background:var(--bg);
+    color:#333;
+    line-height:1.6;
+}
+/* ID Selector */
+#main-title{
+    text-align:center;
+    color:var(--primary);
+    margin:20px;
+}
+/* Class Selector */
+.box{
+    background:white;
+    border:2px solid black;
+    padding:20px;
+    margin:20px;
+    border-radius:10px;
+    box-shadow:5px 5px 10px gray;
+}
+/* Group selector */
+h2,p{
+    margin-bottom:10px;
+}
+/* link styles */
+a{
+    color:blue;
+}
+a:hover{
+    color:red;
+}
+/* list */
+ul{
+    list-style:square;
+    margin-left:30px;
+}
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+table,th,td{
+    border:1px solid black;
+}
+th,td{
+    padding:10px;
+    text-align:center;
+}
+/* Button */
+button{
+    background:var(--primary);
+    color:white;
+    padding:10px 20px;
+    border:none;
+    cursor:pointer;
+    transition:.4s;
+}
+button:hover{
+    background:green;
+    transform:scale(1.1);
+}
+/* Image */
+img{
+    width:200px;
+    border-radius:10px;
+    box-shadow:3px 3px 8px black;
+}
+/* Flexbox */
+.flex{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+}
+/* Grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+.grid div{
+    background:orange;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+/* Position */
+.relative{
+    position:relative;
+    height:120px;
+    border:2px dashed gray;
+}
+
+.absolute{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:red;
+    color:white;
+    padding:10px;
+}
+/* Overflow */
+.overflow{
+    width:250px;
+    height:100px;
+    overflow:auto;
+    border:1px solid black;
+}
+/* Animation */
+@keyframes move{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(200px);
+    }
+}
+.animation{
+    width:100px;
+    height:100px;
+    background:black;
+    animation:move 5s infinite alternate;
+}
+/* Transform */
+.rotate:hover{
+    transform:rotate(15deg);
+}
+/* Pseudo element */
+.demo::first-letter{
+    font-size:40px;
+    color:red;
+}
+/* Attribute Selector */
+input[type=text]{
+    padding:8px;
+    border:2px solid blue;
+}
+/* Opacity */
+.opacity{
+    opacity:.6;
+}
+/* Media Query */
+@media(max-width:768px){
+.grid{
+grid-template-columns:1fr;
+}
+.flex{
+flex-direction:column;
+}
+body{
+background:#ddd;
+}
+}
+</style>
+</head>
+<body>
+<h1 id="main-title">Complete CSS Example</h1>
+<div class="box">
+<h2>Text Formatting</h2>
+<p class="demo">
+CSS makes web pages beautiful and responsive.
+</p>
+<a href="#">Hover over this link</a>
+</div>
+<div class="box">
+<h2>List</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Reactjs</li>
+</ul>
+</div>
+<div class="box">
+<h2>Table</h2>
+<table>
+<tr>
+<th>Name</th>
+<th>Course</th>
+</tr>
+<tr>
+<td>Tarak</td>
+<td>CSS</td>
+</tr>
+<tr>
+<td>Gupta</td>
+<td>HTML</td>
+</tr>
+</table>
+</div>
+<div class="box">
+<h2>Form</h2>
+<input type="text" placeholder="Enter Name">
+<br><br>
+<button>Submit</button>
+</div>
+<div class="box">
+<h2>Image</h2>
+<img class="rotate opacity"
+src="/HTML/Day-1Tasks01-06-2026/Maheshbabu.jpg"
+alt="Image">
+</div>
+<div class="box">
+<h2>Flexbox</h2>
+<div class="flex">
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+</div>
+</div>
+<div class="box">
+<h2>Grid</h2>
+<div class="grid">
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+</div>
+</div>
+<div class="box">
+<h2>Position</h2>
+<div class="relative">
+<div class="absolute">
+Absolute Box
+</div>
+</div>
+</div>
+<div class="box">
+<h2>Overflow</h2>
+<div class="overflow">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+voluptatibus repellat sint, pariatur possimus officiis laboriosam
+eaque dolorem, reprehenderit beatae deserunt cumque molestiae.
+</div>
+</div>
+<div class="box">
+<h2>Animation</h2>
+<div class="animation"></div>
+</div>
+</body>
+</html>

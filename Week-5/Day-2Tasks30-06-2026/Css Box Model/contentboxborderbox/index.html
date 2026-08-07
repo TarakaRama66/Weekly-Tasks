@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: Arial;
+}
+
+.box {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 20px;
+}
+
+.content {
+    box-sizing: content-box;
+    background: lightblue;
+}
+
+.border {
+    box-sizing: border-box;
+    background: lightgreen;
+}
+</style>
+</head>
+
+<body>
+
+<h3>content-box</h3>
+<div class="box content">
+    content-box example
+</div>
+
+<h3>border-box</h3>
+<div class="box border">
+    border-box example
+</div>
+
+</body>
+</html>

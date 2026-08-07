@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Float and Clear Layouts</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+/* FLOAT BOXES */
+.box {
+    width: 30%;
+    height: 120px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    line-height: 120px;
+    font-weight: bold;
+}
+
+/* Floating left boxes */
+.left {
+    float: left;
+    background: steelblue;
+}
+
+/* Floating right box */
+.right {
+    float: right;
+    background: tomato;
+}
+
+/* CLEAR FIX */
+.clearfix {
+    clear: both;
+}
+
+/* TEXT WRAP EXAMPLE */
+.image {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background: lightgreen;
+    text-align: center;
+    line-height: 150px;
+}
+
+/* Paragraph wrapping around floated image */
+.text {
+    background: white;
+    padding: 10px;
+}
+
+/* FOOTER USING CLEAR */
+.footer {
+    clear: both;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>CSS Float and Clear Demo</h2>
+
+<!-- FLOAT LAYOUT -->
+<div class="box left">Left Box</div>
+<div class="box left">Left Box</div>
+<div class="box right">Right Box</div>
+
+<div class="clearfix"></div>
+
+<hr>
+
+<!-- FLOAT IMAGE WITH TEXT WRAP -->
+<div class="image">Image</div>
+
+<div class="text">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates.
+</div>
+
+<div class="clearfix"></div>
+
+<hr>
+
+<!-- FOOTER -->
+<div class="footer">
+    Footer Section (cleared using clear: both)
+</div>
+
+</body>
+</html>

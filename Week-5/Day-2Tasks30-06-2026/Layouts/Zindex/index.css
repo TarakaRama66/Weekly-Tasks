@@ -1,0 +1,30 @@
+.box {
+    width: 150px;
+    height: 150px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+}
+
+.red {
+    background-color: red;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+.blue {
+    background-color: blue;
+    top: 100px;
+    left: 100px;
+    z-index: 3;
+}
+
+.green {
+    background-color: green;
+    top: 150px;
+    left: 150px;
+    z-index: 2;
+}

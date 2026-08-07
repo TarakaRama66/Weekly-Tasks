@@ -1,0 +1,18 @@
+Both Arguments Object and Rest Parameters allow a function to handle multiple arguments, but they behave differently.
+Arguments Object:
+
+A special object available inside regular functions that contains all arguments passed to the function.
+
+Rest Parameters (...args):
+
+An ES6 feature that collects multiple arguments into a real array.
+
+
+
+Feature	Arguments Object	Rest Parameters
+Introduced In	Older JavaScript (ES5)	ES6
+Type	Object (Array-like)	Array
+Array Methods	❌ Not Available	✅ Available
+Syntax	arguments	...args
+Arrow Functions	❌ Not Available	✅ Available
+Recommended	Legacy Code	Modern Projects

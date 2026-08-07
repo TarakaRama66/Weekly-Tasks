@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Margin Collapse</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+/* SIBLING MARGIN COLLAPSE */
+.sibling1 {
+    background: lightblue;
+    margin-bottom: 40px;
+    height: 80px;
+}
+
+.sibling2 {
+    background: lightgreen;
+    margin-top: 30px;
+    height: 80px;
+}
+
+/* PARENT - CHILD COLLAPSE */
+.parent {
+    background: #ddd;
+    margin-top: 40px;
+    height: 150px;
+}
+
+.child {
+    background: coral;
+    margin-top: 50px;
+    height: 80px;
+}
+
+/* FIXED VERSION (NO COLLAPSE) */
+.parent-fixed {
+    background: #ccc;
+    margin-top: 40px;
+
+/* Fix: prevents collapse */
+    padding-top: 1px;
+}
+
+.child-fixed {
+    background: orange;
+    margin-top: 50px;
+    height: 80px;
+}
+
+/* LABEL STYLE */
+label {
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Margin Collapse Demonstration</h2>
+
+<!-- SIBLING COLLAPSE -->
+<label>Sibling Margin Collapse</label>
+<div class="sibling1">Box 1 (margin-bottom: 40px)</div>
+<div class="sibling2">Box 2 (margin-top: 30px)</div>
+<p><b>Result:</b> Only 40px space (not 70px)</p>
+
+<hr>
+
+<!-- PARENT - CHILD COLLAPSE -->
+<label>Parent-Child Margin Collapse</label>
+<div class="parent">
+    <div class="child">Child (margin-top: 50px)</div>
+</div>
+<p><b>Problem:</b> Child margin collapses outside parent</p>
+
+<hr>
+
+<!-- FIXED VERSION -->
+<label>Fixed (No Collapse)</label>
+<div class="parent-fixed">
+    <div class="child-fixed">Child (inside padded parent)</div>
+</div>
+<p><b>Fix:</b> padding prevents margin collapse</p>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Positioning methods</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 2000px; /* for scrolling */
+}
+
+/* STATIC (default) */
+.static {
+    position: static;
+    background: lightblue;
+    padding: 15px;
+    margin: 10px;
+}
+
+/* RELATIVE */
+.relative {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: lightgreen;
+    padding: 15px;
+    margin: 10px;
+}
+
+/* ABSOLUTE */
+.parent {
+    position: relative;
+    background: #ddd;
+    height: 200px;
+    margin: 20px;
+}
+
+.absolute {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: coral;
+    padding: 15px;
+}
+
+/* FIXE */
+.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: purple;
+    color: white;
+    padding: 15px;
+}
+
+/* STICKY */
+.sticky {
+    position: sticky;
+    top: 0;
+    background: orange;
+    padding: 15px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h2>CSS Positioning Methods Demo</h2>
+
+<!-- STATIC -->
+<div class="static">
+    Static Position (default, no movement)
+</div>
+
+<!-- RELATIVE -->
+<div class="relative">
+    Relative Position (moved 20px down & right)
+</div>
+
+<!-- ABSOLUTE -->
+<div class="parent">
+    Parent (position: relative)
+
+    <div class="absolute">
+        Absolute Position (top-right inside parent)
+    </div>
+</div>
+
+<!-- STICKY -->
+<div class="sticky">
+    Sticky Header (sticks at top when scrolling)
+</div>
+
+<p>Scroll down to see fixed and sticky behavior...</p>
+
+<!-- Extra content for scrolling -->
+<div style="height:1200px; padding:20px;">
+    Content area for scrolling demonstration.
+</div>
+
+<!-- FIXED -->
+<div class="fixed">
+    Fixed Position (always visible on screen)
+</div>
+
+</body>
+</html>

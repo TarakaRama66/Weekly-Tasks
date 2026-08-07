@@ -1,0 +1,120 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Verdana, sans-serif;
+}
+
+body{
+    background:#eef3f8;
+    padding:15px;
+}
+
+/* Grid Layout */
+.dashboard{
+    display:grid;
+    grid-template-columns:220px 2fr 1fr;
+    grid-template-rows:70px auto auto 60px;
+    gap:15px;
+
+    grid-template-areas:
+    "topbar topbar topbar"
+    "menu stats activity"
+    "menu chart tasks"
+    "footer footer footer";
+}
+
+/* Common Style */
+.dashboard > *{
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Areas */
+.topbar{
+    grid-area:topbar;
+    background:#0d6efd;
+    color:white;
+}
+
+.menu{
+    grid-area:menu;
+}
+
+.stats{
+    grid-area:stats;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.box{
+    background:#20c997;
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:8px;
+}
+
+.chart{
+    grid-area:chart;
+}
+
+.graph{
+    height:220px;
+    margin-top:15px;
+    border:2px dashed #0d6efd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    color:#0d6efd;
+}
+
+.activity{
+    grid-area:activity;
+}
+
+.activity li{
+    margin:12px 0;
+}
+
+.tasks{
+    grid-area:tasks;
+}
+
+.tasks li{
+    margin:10px 0;
+}
+
+.footer{
+    grid-area:footer;
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+}
+
+/* Responsive Design */
+@media(max-width:900px){
+
+.dashboard{
+grid-template-columns:1fr;
+
+grid-template-areas:
+"topbar"
+"menu"
+"stats"
+"chart"
+"activity"
+"tasks"
+"footer";
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+}

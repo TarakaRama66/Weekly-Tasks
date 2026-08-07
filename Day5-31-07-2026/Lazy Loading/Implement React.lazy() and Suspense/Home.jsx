@@ -1,0 +1,9 @@
+function Home() {
+  return (
+    <>
+      <h2>Home Component</h2>
+      <p>Welcome to the Home Page</p>
+    </>
+  );
+}
+export default Home;

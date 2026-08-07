@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Practice Page</title>
+<style>
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* Variables */
+:root{
+    --primary:#3498db;
+    --secondary:#2ecc71;
+    --dark:#333;
+    --light:#f4f4f4;
+}
+/* Body */
+body{
+    font-family:Arial, sans-serif;
+    background:var(--light);
+    color:var(--dark);
+}
+/* Header */
+header{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+/* Navigation */
+nav{
+    background:#222;
+}
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+}
+nav li{
+    margin:10px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px;
+}
+nav a:hover{
+    background:var(--secondary);
+    border-radius:5px;
+}
+/* Container */
+.container{
+    width:90%;
+    margin:20px auto;
+}
+/* Cards using Grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,.2);
+    transition:.4s;
+}
+.card:hover{
+    transform:translateY(-8px);
+}
+.card h2::first-letter{
+    color:red;
+    font-size:35px;
+}
+/* Button */
+button{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:10px 20px;
+    margin-top:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+button:hover{
+    background:var(--secondary);
+    transform:scale(1.05);
+}
+/* Flexbox */
+.flex{
+    display:flex;
+    justify-content:space-around;
+    margin:30px 0;
+}
+.box{
+    width:150px;
+    padding:20px;
+    background:orange;
+    color:white;
+    text-align:center;
+}
+/* Form */
+form{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+}
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+}
+input:focus,
+textarea:focus{
+    border:2px solid var(--primary);
+    outline:none;
+}
+/* Animation */
+.circle{
+    width:80px;
+    height:80px;
+    background:red;
+    border-radius:50%;
+    position:relative;
+    animation:move 4s infinite alternate;
+}
+@keyframes move{
+    from{
+        left:0;
+    }
+    to{
+        left:300px;
+    }
+}
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+/* Responsive */
+@media(max-width:768px){
+.grid{
+    grid-template-columns:1fr;
+}
+.flex{
+    flex-direction:column;
+    align-items:center;
+}
+.box{
+    margin:10px;
+}
+}
+</style>
+</head>
+<body>
+<header>
+<h1>CSS Practice Webpage</h1>
+<p>Combining Multiple CSS Concepts</p>
+</header>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+<div class="container">
+<h2>CSS Grid Cards</h2>
+<div class="grid">
+<div class="card">
+<h2>HTML</h2>
+<p>Structure of web pages.</p>
+<button>Learn More</button>
+</div>
+<div class="card">
+<h2>CSS</h2>
+<p>Style and layout of web pages.</p>
+<button>Learn More</button>
+</div>
+<div class="card">
+<h2>JavaScript</h2>
+<p>Adds interactivity to websites.</p>
+<button>Learn More</button>
+</div>
+</div>
+<h2 style="margin-top:30px;">Flexbox Example</h2>
+<div class="flex">
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+</div>
+<h2>Contact Form</h2>
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button>Send</button>
+</form>
+<h2 style="margin-top:30px;">Animation</h2>
+<div class="circle"></div>
+</div>
+<footer>
+<p>CSS Practice Page</p>
+</footer>
+</body>
+</html>

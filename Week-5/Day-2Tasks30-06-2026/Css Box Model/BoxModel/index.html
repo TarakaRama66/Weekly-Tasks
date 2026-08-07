@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Box Model Example</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f4f4f4;
+    padding:20px;
+}
+
+/* Content Only */
+.content-box{
+    width:200px;
+    height:100px;
+    background-color:lightblue;
+    margin-bottom:20px;
+}
+
+/*Content + Padding */
+.padding-box{
+    width:200px;
+    background-color:lightgreen;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+/*Content + Padding + Border */
+.border-box{
+    width:200px;
+    background-color:lightyellow;
+    padding:20px;
+    border:5px solid orange;
+    margin-bottom:20px;
+}
+
+/*Complete Box Model */
+.margin-box{
+    width:200px;
+    background-color:lightcoral;
+    padding:20px;
+    border:5px solid red;
+    margin:40px;
+}
+</style>
+
+</head>
+<body>
+
+<h2>CSS Box Model Examples</h2>
+
+<div class="content-box">
+    <h3>Content</h3>
+    Content Area
+</div>
+
+<div class="padding-box">
+    Content with 20px Padding
+</div>
+
+<div class="border-box">
+    Content with Padding and Border
+</div>
+
+<div class="margin-box">
+    Content with Padding, Border, and Margin
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+function Header() {
+  return (
+    <>
+      <h1>My Website</h1>
+      <hr></hr>
+    </>
+  );
+}
+
+export default Header;
