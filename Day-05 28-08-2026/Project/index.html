@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Task Manager</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f4f6f8;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    input,
+    select,
+    button {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+    input {
+      flex: 1;
+    }
+    button {
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+      border: none;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+    #searchInput {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    #status {
+      padding: 10px;
+      color: #555;
+    }
+    #stats {
+      background: #e0e7ff;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .task {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
+    .task-info {
+      flex: 1;
+    }
+    .task-title {
+      font-size: 17px;
+      font-weight: bold;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: #888;
+    }
+    .priority {
+      color: #dc2626;
+      font-weight: bold;
+    }
+    .task-actions {
+      display: flex;
+      gap: 5px;
+    }
+    .delete-btn {
+      background: #dc2626;
+    }
+    .delete-btn:hover {
+      background: #b91c1c;
+    }
+    .empty {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+    }
+    @media (max-width: 600px) {
+      .controls {
+        flex-direction: column;
+      }
+      .task {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .task-actions {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Async Task Manager</h1>
+  <!-- Add Task -->
+  <div class="controls">
+    <input
+      type="text"
+      id="taskInput"
+      placeholder="Enter a task...">
+    <select id="priority">
+      <option value="normal">Normal</option>
+      <option value="high">High Priority</option>
+    </select>
+    <button id="addBtn">Add Task</button>
+  </div>
+  <!-- Search -->
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search tasks...">
+  <!-- Async status -->
+  <p id="status">Loading tasks...</p>
+  <!-- Statistics -->
+  <div id="stats">
+    Total: 0 | Completed: 0 | Pending: 0
+  </div>
+  <!-- Task List -->
+  <div id="taskList"></div>
+  <!-- JavaScript -->
+  <script src="./index.js"></script>
+</body>
+</html>
