@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zumba Class Dashboard</title>
+ 
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+ 
+    body{
+        background:#f4f4f4;
+        padding:20px;
+    }
+ 
+    .container{
+        max-width:1200px;
+        margin:auto;
+    }
+ 
+    h1{
+        text-align:center;
+        margin-bottom:20px;
+        color:#333;
+    }
+ 
+    .card{
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        margin-bottom:20px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+ 
+    h2{
+        margin-bottom:15px;
+        color:#444;
+    }
+ 
+    table{
+        width:100%;
+        border-collapse:collapse;
+    }
+ 
+    th,td{
+        border:1px solid #ddd;
+        padding:10px;
+        text-align:center;
+    }
+ 
+    th{
+        background:#4CAF50;
+        color:white;
+    }
+ 
+    ul{
+        padding-left:20px;
+    }
+ 
+    .summary{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+        gap:15px;
+    }
+ 
+    .box{
+        background:#4CAF50;
+        color:white;
+        padding:15px;
+        border-radius:10px;
+        text-align:center;
+    }
+ 
+    .box h3{
+        margin-bottom:10px;
+    }
+</style>
+</head>
+<body>
+ 
+<div class="container">
+ 
+    <h1>Zumba Class Management Dashboard</h1>
+ 
+    <div class="card">
+        <h2>Members List</h2>
+        <table id="membersTable"></table>
+    </div>
+ 
+    <div class="card">
+        <h2>Attendance Report</h2>
+        <div id="attendanceReport"></div>
+    </div>
+ 
+    <div class="card">
+        <h2>Instructor Information</h2>
+        <div id="instructorInfo"></div>
+    </div>
+ 
+    <div class="card">
+        <h2>Unique Zumba Playlist</h2>
+        <ul id="songsList"></ul>
+    </div>
+ 
+    <div class="card">
+        <h2>Dashboard Summary</h2>
+        <div class="summary" id="summary"></div>
+    </div>
+ 
+</div>
+ 
+<script>
+//data
+const zumbaMembers = [
+{
+    id:1,
+    name:"Ananya",
+    age:24,
+    attendance:20,
+    membership:"Premium"
+},
+{
+    id:2,
+    name:"Rahul",
+    age:28,
+    attendance:12,
+    membership:"Basic"
+},
+{
+    id:3,
+    name:"Sneha",
+    age:22,
+    attendance:25,
+    membership:"Premium"
+},
+{
+    id:4,
+    name:"Kiran",
+    age:30,
+    attendance:8,
+    membership:"Basic"
+}
+];
+ 
+const instructor = {
+    name:"Megha",
+    experience:6,
+    schedule:{
+        morning:"7 AM",
+        evening:"6 PM"
+    },
+    city:"Hyderabad"
+};
+//array methods
+const activeMembers =
+zumbaMembers.filter(member => member.attendance > 15);
+ 
+const totalAttendance =
+zumbaMembers.reduce(
+(total,member)=> total + member.attendance,
+0
+);
+ 
+const allAdults =
+zumbaMembers.every(member => member.age >= 18);
+ 
+const lowAttendance =
+zumbaMembers.some(member => member.attendance < 10);
+ 
+const songs = [
+"Desi Girl",
+"Kala Chashma",
+"Desi Girl",
+"Malang",
+"Kala Chashma"
+];
+ 
+const uniqueSongs = [...new Set(songs)];
+//table members
+const table = document.getElementById("membersTable");
+ 
+table.innerHTML = `
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Age</th>
+<th>Attendance</th>
+<th>Membership</th>
+</tr>
+ 
+${zumbaMembers.map(member => `
+<tr>
+<td>${member.id}</td>
+<td>${member.name}</td>
+<td>${member.age}</td>
+<td>${member.attendance}</td>
+<td>${member.membership}</td>
+</tr>
+`).join("")}
+`;
+//attendance report
+document.getElementById("attendanceReport").innerHTML = `
+<p><strong>Total Members:</strong> ${zumbaMembers.length}</p>
+<p><strong>Active Members:</strong>
+${activeMembers.map(m => m.name).join(", ")}</p>
+ 
+<p><strong>Total Attendance:</strong>
+${totalAttendance}</p>
+ 
+<p><strong>Any Low Attendance:</strong>
+${lowAttendance ? "Yes" : "No"}</p>
+ 
+<p><strong>All Members Adults:</strong>
+${allAdults ? "Yes" : "No"}</p>
+`;
+//info
+document.getElementById("instructorInfo").innerHTML = `
+<p><strong>Name:</strong> ${instructor.name}</p>
+<p><strong>Experience:</strong> ${instructor.experience} Years</p>
+<p><strong>Morning Batch:</strong> ${instructor.schedule.morning}</p>
+<p><strong>Evening Batch:</strong> ${instructor.schedule.evening}</p>
+<p><strong>City:</strong> ${instructor.city}</p>
+`;
+ 
+//songs
+document.getElementById("songsList").innerHTML =
+uniqueSongs
+.map(song => `<li>${song}</li>`)
+.join("");
+ 
+//summary
+document.getElementById("summary").innerHTML = `
+<div class="box">
+<h3>Total Members</h3>
+<p>${zumbaMembers.length}</p>
+</div>
+ 
+<div class="box">
+<h3>Active Members</h3>
+<p>${activeMembers.length}</p>
+</div>
+ 
+<div class="box">
+<h3>Total Attendance</h3>
+<p>${totalAttendance}</p>
+</div>
+ 
+<div class="box">
+<h3>Instructor</h3>
+<p>${instructor.name}</p>
+</div>
+ 
+<div class="box">
+<h3>Unique Songs</h3>
+<p>${uniqueSongs.length}</p>
+</div>
+ 
+<div class="box">
+<h3>Class Theme</h3>
+<p>Bollywood Zumba</p>
+</div>
+`;
+</script>
+</body>
+</html>
+ 
