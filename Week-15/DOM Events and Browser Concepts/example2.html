@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Membership Dashboard</title>
+  <link rel="stylesheet" href="./example2.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Gym Membership Dashboard</h1>
+      <button id="themeBtn">Dark Mode</button>
+    </header>
+    <!-- Add Member Form -->
+    <section class="form-section">
+      <h2>Add New Member</h2>
+      <div class="form-group">
+        <input
+          type="text"
+          id="memberName"
+          placeholder="Enter Member Name"/>
+        <input
+          type="number"
+          id="memberAge"
+          placeholder="Enter Age"/>
+        <select id="membershipType">
+          <option value="Basic">Basic</option>
+          <option value="Premium">Premium</option>
+          <option value="VIP">VIP</option>
+        </select>
+        <button id="addMemberBtn">Add Member</button>
+      </div>
+    </section>
+    <!-- Search & Filter -->
+    <section class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by name or membership..."/>
+      <select id="filterMembership">
+        <option value="All">All Members</option>
+        <option value="Basic">Basic</option>
+        <option value="Premium">Premium</option>
+        <option value="VIP">VIP</option>
+      </select>
+    </section>
+    <!-- Sort Buttons -->
+    <section class="sort-buttons">
+      <button id="sortName">Sort By Name</button>
+      <button id="sortAge">Sort By Age</button>
+      <button id="sortAttendance">Sort By Attendance</button>
+    </section>
+    <!-- Session & Window Info -->
+    <section class="info-panel">
+      <div class="info-card">
+        <h3>Members Added This Session</h3>
+        <p id="sessionCount">0</p>
+      </div>
+      <div class="info-card">
+        <h3>Current Width</h3>
+        <p id="windowWidth">0px</p>
+      </div>
+    </section>
+    <!-- Statistics -->
+    <section class="stats">
+      <div class="stat-card">
+        <h3>Total Members</h3>
+        <p id="totalMembers">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Basic Members</h3>
+        <p id="basicCount">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Premium Members</h3>
+        <p id="premiumCount">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>VIP Members</h3>
+        <p id="vipCount">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Attendance</h3>
+        <p id="totalAttendance">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Average Attendance</h3>
+        <p id="averageAttendance">0</p>
+      </div>
+    </section>
+    <!-- Members List -->
+    <section>
+      <h2>Members List</h2>
+      <div id="memberContainer">
+        <!-- Dynamic Member Cards -->
+      </div>
+    </section>
+  </div>
+  <script src="./example2.js"></script>
+</body>
+</html>
+ 

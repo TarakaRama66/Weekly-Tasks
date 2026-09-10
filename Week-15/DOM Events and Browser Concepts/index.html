@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Intake Tracker</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+ 
+  <div class="container">
+    <h1>Water Intake Tracker</h1>
+ 
+    <div class="input-section">
+      <input type="number" id="waterInput" placeholder="Enter water in ml" />
+      <button id="addBtn">Add Water</button>
+    </div>
+ 
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search water amount..."
+    />
+    <h3 id="totalWater">Today's Total: 0 ml</h3>
+    <h3 id="sessionCount">Entries Added This Session: 0</h3>
+    <h3 id="windowWidth">Window Width: 0 px</h3>
+ 
+    <ul id="waterList"></ul>
+  </div>
+ 
+  <script src="./index.js"></script>
+</body>
+</html>
+ 
