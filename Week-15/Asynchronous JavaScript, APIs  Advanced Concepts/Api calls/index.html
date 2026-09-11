@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gym API Dashboard</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+ 
+  <div class="container">
+ 
+    <header>
+      <h1>Gym API Dashboard</h1>
+      <p>Fetch API • GET • POST • PUT • PATCH • DELETE</p>
+    </header>
+ 
+    <div class="button-grid">
+      <button onclick="getMembers()">GET Members</button>
+      <button onclick="addMember()">POST Member</button>
+      <button onclick="updateMember()">PUT Member</button>
+      <button onclick="patchMember()">PATCH Member</button>
+      <button onclick="deleteMember()">DELETE Member</button>
+    </div>
+ 
+    <div id="loader" class="loader hidden">
+      Loading...
+    </div>
+ 
+    <div id="output" class="output">
+      <div class="welcome">
+        Click any button to perform an API operation.
+      </div>
+    </div>
+ 
+  </div>
+ 
+  <script src="./index.js"></script>
+</body>
+</html>
+ 

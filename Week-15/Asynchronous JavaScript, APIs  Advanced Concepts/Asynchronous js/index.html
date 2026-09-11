@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Membership Dashboard</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+body{
+    background:#f4f4f4;
+    padding:30px;
+}
+.container{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+.card{
+    border:1px solid #ddd;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:8px;
+}
+.card h2{
+    margin-bottom:10px;
+    color:#444;
+}
+.success{
+    color:green;
+    font-weight:bold;
+}
+.error{
+    color:red;
+    font-weight:bold;
+}
+.loading{
+    color:orange;
+    font-weight:bold;
+}
+ul{
+    margin-left:20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Gym Membership Dashboard</h1>
+    <div class="card">
+        <h2>Member Details</h2>
+        <div id="member">Loading...</div>
+    </div>
+    <div class="card">
+        <h2>Trainer Booking Status</h2>
+        <div id="trainer">Waiting...</div>
+    </div>
+    <div class="card">
+        <h2>Payment Status</h2>
+        <div id="payment">Waiting...</div>
+    </div>
+    <div class="card">
+        <h2>Services</h2>
+        <ul id="services"></ul>
+    </div>
+    <div class="card">
+        <h2>Fastest Response</h2>
+        <div id="race"></div>
+    </div>
+    <div class="card">
+        <h2>Verification Results</h2>
+        <ul id="verification"></ul>
+    </div>
+    <div class="card">
+        <h2>Assigned Trainer</h2>
+        <div id="assignedTrainer"></div>
+    </div>
+    <div class="card">
+        <h2>Member Dashboard</h2>
+        <div id="dashboard"></div>
+    </div>
+    <div class="card">
+        <h2>Error Handling</h2>
+        <div id="errorBox"></div>
+    </div>
+</div>
+<script>
+//members details(callback) 
+function fetchMember(callback){
+    setTimeout(()=>{
+        callback({
+            name:"tarak",
+            plan:"Premium",
+            joiningDate:"01-Sep-2026"
+        });
+    },2000);
+}
+fetchMember((member)=>{
+    document.getElementById("member").innerHTML=`
+        <p><b>Name:</b> ${member.name}</p>
+        <p><b>Plan:</b> ${member.plan}</p>
+        <p><b>Joining Date:</b> ${member.joiningDate}</p>
+    `;
+});
+//callbavk hell
+function checkTrainer(callback){
+    setTimeout(()=>{
+        document.getElementById("trainer").innerHTML=
+        `<p class="success">✓ Trainer Available</p>`;
+        callback();
+    },1000);
+}
+function checkSlot(callback){
+    setTimeout(()=>{
+        document.getElementById("trainer").innerHTML+=
+        `<p class="success">✓ Slot Available</p>`;
+        callback();
+    },1000);
+}
+function bookSession(){
+    setTimeout(()=>{
+        document.getElementById("trainer").innerHTML+=
+        `<p class="success">✓ Session Booked</p>`;
+    },1000);
+}
+checkTrainer(()=>{
+    checkSlot(()=>{
+        bookSession();
+    });
+});
+//promise 
+const paymentPromise = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("Payment Successful");
+    },2500);
+});
+paymentPromise
+.then((msg)=>{
+    document.getElementById("payment").innerHTML=`
+    <p class="success">${msg}</p>
+    <p class="success">Membership Activated</p>`;
+})
+.catch((err)=>{
+    document.getElementById("payment").innerHTML=
+    `<p class="error">${err}</p>`;
+})
+.finally(()=>{
+    document.getElementById("payment").innerHTML+=
+    `<p>Process Completed</p>`;
+});
+//promise.all 
+const service1=new Promise(resolve=>{
+    setTimeout(()=>resolve("Personal Training"),1000);
+});
+const service2=new Promise(resolve=>{
+    setTimeout(()=>resolve("Diet Plan"),1500);
+});
+const service3=new Promise(resolve=>{
+    setTimeout(()=>resolve("Zumba Classes"),2000);
+});
+Promise.all([service1,service2,service3])
+.then((services)=>{
+    const ul=document.getElementById("services");
+    services.forEach(service=>{
+        ul.innerHTML+=`<li>✓ ${service}</li>`;
+    });
+});
+//promise.race 
+const trainerResponse=new Promise(resolve=>{
+    setTimeout(()=>resolve("Trainer Responded"),3000);
+});
+const nutritionistResponse=new Promise(resolve=>{
+    setTimeout(()=>resolve("Nutritionist Responded"),2000);
+});
+const receptionResponse=new Promise(resolve=>{
+    setTimeout(()=>resolve("Reception Responded"),1000);
+});
+Promise.race([
+    trainerResponse,
+    nutritionistResponse,
+    receptionResponse
+])
+.then((winner)=>{
+    document.getElementById("race").innerHTML=
+    `<p class="success"> ${winner} First</p>`;
+});
+//promise.allsettled 
+Promise.allSettled([
+    Promise.resolve("Aadhaar Verified"),
+    Promise.reject("Medical Failed"),
+    Promise.resolve("Payment Verified")
+])
+.then((results)=>{
+    const ul=document.getElementById("verification");
+    results.forEach(result=>{
+        const li=document.createElement("li");
+        if(result.status==="fulfilled"){
+            li.innerHTML=`${result.value}`;
+            li.className="success";
+        }else{
+            li.innerHTML=`${result.reason}`;
+            li.className="error";
+        }
+        ul.appendChild(li);
+    });
+});
+//promise.any 
+const trainerA=Promise.reject("Trainer A Busy");
+const trainerB=new Promise(resolve=>{
+    setTimeout(()=>{
+        resolve("Trainer B Assigned");
+    },1000);
+});
+const trainerC=new Promise(resolve=>{
+    setTimeout(()=>{
+        resolve("Trainer C Assigned");
+    },500);
+});
+Promise.any([
+    trainerA,
+    trainerB,
+    trainerC
+])
+.then((trainer)=>{
+    document.getElementById("assignedTrainer").innerHTML=
+    `<p class="success">${trainer}</p>`;
+});
+//async await 
+function getProfile(){
+    return new Promise(resolve=>{
+        setTimeout(()=>resolve("Profile Loaded"),1000);
+    });
+}
+function getWorkout(){
+    return new Promise(resolve=>{
+        setTimeout(()=>resolve("Workout Plan Loaded"),1500);
+    });
+}
+function getDiet(){
+    return new Promise(resolve=>{
+        setTimeout(()=>resolve("Diet Plan Loaded"),2000);
+    });
+}
+async function loadDashboard(){
+    const profile=await getProfile();
+    const workout=await getWorkout();
+    const diet=await getDiet();
+    document.getElementById("dashboard").innerHTML=`
+        <p class="success">${profile}</p>
+        <p class="success">${workout}</p>
+        <p class="success">${diet}</p>
+    `;
+}
+loadDashboard();
+//error handling 
+function findMember(id){
+    return new Promise((resolve,reject)=>{
+        if(id===101){
+            resolve("Member Found");
+        }else{
+            reject("Invalid Membership ID");
+        }
+    });
+}
+async function checkMember(){
+    try{
+        const result=await findMember(999);
+        document.getElementById("errorBox").innerHTML=result;
+    }catch(error){
+        document.getElementById("errorBox").innerHTML=
+        `<p class="error">${error}</p>`;
+    }
+}
+checkMember();
+</script>
+</body>
+</html>
