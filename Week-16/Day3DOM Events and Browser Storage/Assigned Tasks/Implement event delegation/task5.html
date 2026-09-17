@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+    <ul id="users"></ul>
+    <script>
+    const users=document.getElementById("users");
+    for(let i=1;i<=1000;i++){
+        users.innerHTML+=`
+        <li>
+        User ${i}
+        <button data-id="${i}">
+        View
+        </button>
+        </li>`;
+    }
+    users.addEventListener("click",(e)=>{
+        if(e.target.tagName==="BUTTON"){
+            alert("Selected User : "+e.target.dataset.id);
+        }
+    });
+    </script>
+</body>
+</html>
