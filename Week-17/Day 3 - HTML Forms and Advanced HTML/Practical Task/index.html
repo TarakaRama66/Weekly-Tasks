@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+    <header>
+        <h1>Job Application Form</h1>
+        <p>Fill in all required details to apply for the position.</p>
+    </header>
+    <main>
+        <form action="#" method="post">
+            <!-- Personal Details -->
+            <fieldset>
+                <legend>Personal Details</legend>
+                <label for="fullname">Full Name *</label><br>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter Full Name"
+                    minlength="3"
+                    maxlength="50"
+                    required>
+                <br><br>
+                <label for="dob">Date of Birth *</label><br>
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    required>
+                <br><br>
+                <label>Gender *</label><br>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </fieldset>
+            <br>
+            <!-- Contact Details -->
+            <fieldset>
+                <legend>Contact Details</legend>
+                <label for="email">Email Address *</label><br>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@gmail.com"
+                    required>
+                <br><br>
+                <label for="phone">Mobile Number *</label><br>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    pattern="[0-9]{10}"
+                    placeholder="10 Digit Mobile Number"
+                    required>
+                <br><br>
+                <label for="location">Location *</label><br>
+                <select id="location" name="location" required>
+                    <option value="">Select Location</option>
+                    <option>Hyderabad</option>
+                    <option>Bangalore</option>
+                    <option>Chennai</option>
+                    <option>Pune</option>
+                    <option>Mumbai</option>
+                </select>
+            </fieldset>
+            <br>
+            <!-- Education -->
+            <fieldset>
+                <legend>Education Details</legend>
+                <label for="qualification">Highest Qualification *</label><br>
+                <select id="qualification" name="qualification" required>
+                    <option value="">Select Qualification</option>
+                    <option>B.Tech</option>
+                    <option>M.Tech</option>
+                    <option>BCA</option>
+                    <option>MCA</option>
+                    <option>B.Sc</option>
+                    <option>M.Sc</option>
+                </select>
+                <br><br>
+                <label for="college">College Name *</label><br>
+                <input
+                    type="text"
+                    id="college"
+                    name="college"
+                    placeholder="Enter College Name"
+                    required>
+                <br><br>
+                <label for="percentage">Percentage / CGPA *</label><br>
+                <input
+                    type="number"
+                    id="percentage"
+                    name="percentage"
+                    min="0"
+                    max="100"
+                    step="0.01"
+                    required>
+            </fieldset>
+            <br>
+            <!-- Skills -->
+            <fieldset>
+                <legend>Technical Skills</legend>
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                <label for="javascript">JavaScript</label><br>
+                <input type="checkbox" id="react" name="skills" value="React">
+                <label for="react">React</label><br>
+                <input type="checkbox" id="redux" name="skills" value="Redux">
+                <label for="redux">Redux Toolkit</label>
+            </fieldset>
+            <br>
+            <!-- Experience -->
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="experience">Years of Experience *</label><br>
+                <input
+                    type="number"
+                    id="experience"
+                    name="experience"
+                    min="0"
+                    max="40"
+                    required>
+                <br><br>
+                <label for="about">Experience Description</label><br>
+                <textarea
+                    id="about"
+                    name="about"
+                    rows="5"
+                    cols="50"
+                    placeholder="Describe your experience and projects">
+                </textarea>
+            </fieldset>
+            <br>
+            <!-- Resume Upload -->
+            <fieldset>
+                <legend>Resume Upload</legend>
+                <label for="resume">Upload Resume (PDF/DOC) *</label><br>
+                <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    accept=".pdf,.doc,.docx"
+                    required>
+            </fieldset>
+            <br>
+            <!-- Terms -->
+            <fieldset>
+                <legend>Terms and Conditions</legend>
+                <input
+                    type="checkbox"
+                    id="terms"
+                    required>
+                <label for="terms">
+                    I confirm that all information provided is accurate and I agree to the Terms & Conditions.
+                </label>
+            </fieldset>
+            <br>
+            <!-- Buttons -->
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Clear Form">
+        </form>
+    </main>
+    <footer>
+        <p>Job Portal</p>
+    </footer>
+</body>
+</html>
