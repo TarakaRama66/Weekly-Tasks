@@ -1,0 +1,30 @@
+.title{
+    position:relative;
+    display:inline-block;
+}
+ 
+.title::before{
+    content:"🔥";
+    margin-right:10px;
+}
+ 
+.title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:100%;
+    height:4px;
+    background:red;
+}
+ 
+.content::first-letter{
+    font-size:50px;
+    color:red;
+    font-weight:bold;
+}
+ 
+.content::first-line{
+    color:blue;
+    font-weight:bold;
+}

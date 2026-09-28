@@ -1,0 +1,27 @@
+/* Element Selector */
+h1{
+    color:red;
+}
+ 
+/* Class Selector */
+.heading{
+    color:blue;
+}
+ 
+/* ID Selector */
+#main-heading{
+    color:green;
+}
+ 
+/* Parent Styles */
+.parent{
+    color:purple;
+    font-family:Arial;
+    font-size:22px;
+    text-align:center;
+}
+ 
+/* Child Override */
+.parent h2{
+    color:red;
+}

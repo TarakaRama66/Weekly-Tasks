@@ -1,0 +1,46 @@
+/* Attribute Selector */
+input[type="email"]{
+    border:3px solid green;
+}
+
+/* Starts With */
+a[href^="https"]{
+    color:green;
+}
+
+/* Descendant Selector */
+.parent p{
+    color:red;
+}
+
+/* Child Selector */
+.parent > p{
+    font-size:22px;
+    color:blue;
+}
+
+/* Adjacent Sibling */
+h2 + p{
+    background:yellow;
+}
+
+/* General Sibling */
+h2 ~ p{
+    border-left:4px solid red;
+    padding-left:10px;
+}
+
+/* First Child */
+li:first-child{
+    color:red;
+}
+
+/* Last Child */
+li:last-child{
+    color:green;
+}
+
+/* Nth Child */
+li:nth-child(odd){
+    background:#eee;
+}
