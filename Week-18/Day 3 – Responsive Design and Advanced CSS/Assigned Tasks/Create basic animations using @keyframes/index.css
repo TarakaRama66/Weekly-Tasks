@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+body{
+    min-height:100vh;
+    background:#0f172a;
+    padding:40px;
+}
+h1{
+    color:white;
+    text-align:center;
+    margin-bottom:50px;
+}
+.container{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+.box{
+    height:220px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    border-radius:20px;
+}
+/* Bounce Animation */
+.bounce{
+    background:#2563eb;
+    animation:bounce 2s infinite;
+}
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-40px);
+    }
+}
+/* Rotate Animation */
+.rotate{
+    background:#16a34a;
+    animation:rotateBox 4s linear infinite;
+}
+@keyframes rotateBox{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+/* Pulse Animation */
+.pulse{
+    background:#dc2626;
+    animation:pulse 2s infinite;
+}
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.2);
+    }
+}
+/* Slide Animation */
+.slide{
+    background:#9333ea;
+    animation:slide 3s infinite alternate;
+}
+@keyframes slide{
+    from{
+        transform:translateX(-40px);
+    }
+    to{
+        transform:translateX(40px);
+    }
+}
+/* Color Change Animation */
+.color{
+    animation:colorChange 5s infinite;
+}
+@keyframes colorChange{
+    0%{
+        background:#ef4444;
+    }
+    25%{
+        background:#3b82f6;
+    }
+    50%{
+        background:#22c55e;
+    }
+    75%{
+        background:#eab308;
+    }
+    100%{
+        background:#ef4444;
+    }
+}
+/* Floating Animation */
+.floating{
+    background:#06b6d4;
+    animation:floating 3s ease-in-out infinite;
+}
+@keyframes floating{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-25px);
+    }
+}
+@media(max-width:768px){
+    .box{
+        height:180px;
+        font-size:20px;
+    }
+}

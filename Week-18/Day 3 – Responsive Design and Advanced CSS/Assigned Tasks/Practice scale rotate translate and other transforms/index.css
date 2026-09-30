@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #334155
+    );
+    overflow:hidden;
+}
+.container{
+    perspective:1000px;
+}
+.card{
+    width:400px;
+    padding:40px;
+    text-align:center;
+    color:white;
+    border-radius:20px;
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed
+    );
+    transition:1s;
+    cursor:pointer;
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.3);
+    position:relative;
+    overflow:hidden;
+}
+.card h2{
+    margin-bottom:20px;
+}
+.card p{
+    line-height:1.8;
+    margin-bottom:25px;
+}
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.5s;
+}
+/* ALL TRANSFORMS TOGETHER */
+.card:hover{
+    transform:
+    scale(1.15)          /* Scale */
+    rotate(5deg)         /* Rotate */
+    translateY(-25px)    /* Translate */
+    skew(-3deg)          /* Skew */
+    rotateX(15deg)       /* 3D X */
+    rotateY(15deg);      /* 3D Y */
+    box-shadow:
+    0 40px 80px rgba(0,0,0,.5);
+}
+/* Button Animation */
+.card:hover button{
+    transform:
+    scale(1.1)
+    rotate(-5deg);
+}
+/* Shine Effect */
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:
+    rgba(255,255,255,.3);
+    transform:skewX(-25deg);
+    transition:1s;
+}
+.card:hover::before{
+    left:150%;
+}
+/* Mobile */
+@media(max-width:500px){
+    .card{
+        width:90%;
+        padding:25px;
+    }
+}
