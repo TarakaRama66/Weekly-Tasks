@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Data Processing</title>
+</head>
+<body>
+    <h2>Employee Data Processing Application</h2>
+
+    <h3>Find Employee by ID</h3>
+    <input type="number" id="employeeId" placeholder="Enter employee ID">
+    <button onclick="searchEmployee()">Search</button>
+
+    <h3>Filter by Department</h3>
+    <select id="department">
+        <option value="All">All Departments</option>
+        <option value="IT">IT</option>
+        <option value="HR">HR</option>
+        <option value="Finance">Finance</option>
+    </select>
+    <button onclick="filterEmployees()">Filter</button>
+
+    <h3>Sort by Salary</h3>
+    <button onclick="sortSalary('asc')">Low to High</button>
+    <button onclick="sortSalary('desc')">High to Low</button>
+
+    <h3>Employee List</h3>
+    <button onclick="displayEmployees(employees)">Show All Employees</button>
+    <div id="employeeList"></div>
+
+    <h3>Salary Statistics</h3>
+    <button onclick="showStatistics()">Calculate Statistics</button>
+    <div id="statistics"></div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
