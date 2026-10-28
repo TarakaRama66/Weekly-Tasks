@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f6f9;
+}
+h1, h2 {
+    color: #222;
+}
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+input, textarea, select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+button {
+    padding: 9px 14px;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+}
+#taskList {
+    padding: 0;
+    list-style: none;
+}
+.task-item {
+    background-color: white;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.task-item h3 {
+    margin-top: 0;
+}
+.task-item p {
+    overflow-wrap: anywhere;
+}
+.completed {
+    background-color: #e5f7e8;
+}
+.completed h3 {
+    text-decoration: line-through;
+    color: #666;
+}
+#errorMessage {
+    color: red;
+}
+#emptyMessage {
+    color: #666;
+}
+.task-status {
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+        padding: 10px;
+    }
+}

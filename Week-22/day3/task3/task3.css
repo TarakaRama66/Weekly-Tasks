@@ -1,0 +1,11 @@
+.highlight {
+    color: white;
+    background-color: green;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.large-text {
+    font-size: 24px;
+    font-weight: bold;
+}

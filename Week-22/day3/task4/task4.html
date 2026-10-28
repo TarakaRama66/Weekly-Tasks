@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+</head>
+<body>
+    <h1>Browser Events Demo</h1>
+
+    <h3>1. Click Event</h3>
+    <button id="clickBtn">Click Me</button>
+    <p id="clickOutput">Button not clicked yet.</p>
+
+    <h3>2. Input Event</h3>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <p id="inputOutput">Your name will appear here.</p>
+
+    <h3>3. Change Event</h3>
+    <select id="course">
+        <option value="">Select a course</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="React">React</option>
+        <option value="HTML">HTML</option>
+    </select>
+    <p id="changeOutput">No course selected.</p>
+
+    <h3>4. Submit Event</h3>
+    <form id="myForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="submitOutput"></p>
+
+    <h3>5. Keyboard Event</h3>
+    <input type="text" id="keyInput" placeholder="Press any key">
+    <p id="keyOutput">Keyboard event will appear here.</p>
+
+    <h3>6. Mouse Event</h3>
+    <div id="mouseBox">
+        Move your mouse over this text.
+    </div>
+    <p id="mouseOutput">Mouse has not entered.</p>
+
+    <script src="./task4.js"></script>
+</body>
+</html>
