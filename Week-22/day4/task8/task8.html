@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API State Handling</title>
+</head>
+<body>
+
+    <h1>User Data Application</h1>
+
+    <label for="mode">Select API Scenario:</label>
+
+    <select id="mode">
+        <option value="success">Success - Load Users</option>
+        <option value="empty">Empty - No Users</option>
+        <option value="error">Error - Failed Request</option>
+    </select>
+
+    <br><br>
+
+    <button id="loadBtn">Load Users</button>
+    <button id="clearBtn">Clear Output</button>
+
+    <h2>Status</h2>
+    <p id="status" aria-live="polite">Select a scenario and load users.</p>
+
+    <h2>User List</h2>
+    <div id="userList"></div>
+
+    <script src="./task8.js"></script>
+</body>
+</html>
