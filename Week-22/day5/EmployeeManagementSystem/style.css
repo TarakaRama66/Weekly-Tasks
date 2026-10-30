@@ -1,0 +1,126 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6fb;
+    color: #172033;
+}
+
+header {
+    background: #182744;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #2864c5;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.dashboard {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.dashboard div {
+    flex: 1;
+    min-width: 150px;
+    background: #eaf0ff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.employee-card {
+    background: #f8f9fc;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.employee-card h3 {
+    margin-top: 0;
+}
+
+.employee-card p {
+    overflow-wrap: anywhere;
+}
+
+.delete {
+    background: #d93636;
+}
+
+.edit {
+    background: #198754;
+}
+
+.hidden {
+    display: none;
+}
+
+#formMessage {
+    color: red;
+}
+
+#status {
+    color: #2864c5;
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 25px;
+    width: 90%;
+    max-width: 450px;
+}
+
+dialog::backdrop {
+    background: #0008;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+}

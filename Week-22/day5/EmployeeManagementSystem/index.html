@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Management System</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Employee Management System</h1>
+        <p>Manage Employee Records</p>
+        <button id="refreshBtn">Load API Data</button>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Employee Registration</h2>
+
+            <form id="employeeForm">
+
+                <input type="hidden" id="employeeId">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Employee Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <select id="department" required>
+                    <option value="">Select Department</option>
+                    <option>Engineering</option>
+                    <option>Human Resources</option>
+                    <option>Finance</option>
+                    <option>Sales</option>
+                    <option>Marketing</option>
+                    <option>Operations</option>
+                </select>
+
+                <input
+                    type="text"
+                    id="role"
+                    placeholder="Job Role"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="salary"
+                    placeholder="Salary"
+                    min="1"
+                    required
+                >
+
+                <input
+                    type="date"
+                    id="joiningDate"
+                    required
+                >
+
+                <p id="formMessage"></p>
+
+                <button type="submit" id="saveBtn">
+                    Add Employee
+                </button>
+
+                <button type="button" id="cancelEditBtn" class="hidden">
+                    Cancel Edit
+                </button>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Employee Dashboard</h2>
+
+            <div class="dashboard">
+                <div>
+                    <h3 id="totalCount">0</h3>
+                    <p>Total Employees</p>
+                </div>
+
+                <div>
+                    <h3 id="departmentCount">0</h3>
+                    <p>Departments</p>
+                </div>
+
+                <div>
+                    <h3 id="averageSalary">₹0</h3>
+                    <p>Average Salary</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Employee List</h2>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search employees..."
+            >
+
+            <select id="filterDepartment">
+                <option value="">All Departments</option>
+            </select>
+
+            <select id="sortBy">
+                <option value="name">Name A-Z</option>
+                <option value="salary-high">Salary High-Low</option>
+                <option value="salary-low">Salary Low-High</option>
+                <option value="date-new">Newest Joining Date</option>
+            </select>
+
+            <p id="status"></p>
+
+            <div id="employeeList"></div>
+
+            <div id="emptyState" class="hidden">
+                No employees found.
+            </div>
+
+        </section>
+
+    </main>
+
+    <dialog id="detailsDialog">
+        <h2>Employee Details</h2>
+        <div id="detailsContent"></div>
+        <button id="closeDialogBtn">Close</button>
+    </dialog>
+
+    <script type="module" src="./js/app.js"></script>
+
+</body>
+</html>
