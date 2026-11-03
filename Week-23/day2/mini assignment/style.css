@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    color: #243b55;
+}
+.container > p {
+    text-align: center;
+    color: #666;
+}
+.form-section,
+.employee-section {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+}
+button:hover {
+    opacity: 0.85;
+}
+#cancelBtn {
+    background: #64748b;
+}
+#extraField {
+    grid-column: span 2;
+}
+#extraField input {
+    width: 100%;
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.stat-card h2 {
+    color: #2563eb;
+}
+.search-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+.employee-card {
+    border: 1px solid #ddd;
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+.employee-card h3 {
+    color: #2563eb;
+}
+.employee-card p {
+    margin: 8px 0;
+}
+.employee-card button {
+    margin: 8px 5px 0 0;
+}
+.delete-btn {
+    background: #dc2626;
+}
+.edit-btn {
+    background: #16a34a;
+}
+.empty-message {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+@media (max-width: 650px) {
+    form,
+    .stats,
+    .search-section {
+        grid-template-columns: 1fr;
+    }
+    #extraField {
+        grid-column: span 1;
+    }
+}
