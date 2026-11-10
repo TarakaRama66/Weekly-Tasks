@@ -1,0 +1,38 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+/* Element Selector */
+p {
+    color: blue;
+    font-size: 18px;
+}
+/* Class Selector */
+.text {
+    color: green;
+}
+/* ID Selector */
+#special {
+    color: red;
+}
+/* Parent Styling */
+.parent {
+    color: purple;
+    font-family: Arial;
+    font-size: 20px;
+    background-color: lightyellow;
+    padding: 15px;
+}
+/* Child Element */
+.parent p {
+    margin: 10px;
+}
+/* Non-Inherited Property */
+.parent {
+    border: 2px solid black;
+}
+/* Important Rule */
+.example {
+    color: orange !important;
+    color: blue;
+}

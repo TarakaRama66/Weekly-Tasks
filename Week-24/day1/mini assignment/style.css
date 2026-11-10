@@ -1,0 +1,324 @@
+
+/* 1. Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Root Styling */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* 3. Element Selector */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+    min-height: 100vh;
+}
+
+/* 4. Profile Container */
+.profile-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* 5. Class Selector */
+.profile-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.profile-card:hover {
+    transform: translateY(-8px);
+}
+
+/* 6. Pseudo-element Before */
+.profile-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(
+        to right,
+        #667eea,
+        #764ba2
+    );
+}
+
+/* 7. Profile Header */
+.profile-header {
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+    padding: 35px 20px;
+    text-align: center;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+/* Profile Status */
+.status {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background-color: white;
+    color: green;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 8. Profile Content */
+.profile-content {
+    padding: 25px;
+    text-align: center;
+}
+
+/* 9. ID Selector */
+#profile-name {
+    color: #222;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+/* 10. Pseudo-element After */
+#profile-name::after {
+    content: " ✨";
+    font-size: 20px;
+}
+
+/* 11. Designation */
+.designation {
+    color: #667eea;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Descendant Selector */
+.profile-content p {
+    line-height: 1.7;
+}
+
+/* Location */
+.location {
+    color: gray;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* 12. Section Headings */
+h2 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+/* 13. About Section */
+.about {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* First Letter Pseudo-element */
+.about p::first-letter {
+    font-size: 25px;
+    color: #764ba2;
+    font-weight: bold;
+}
+
+/* 14. Skills Section */
+.skills {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* Flexbox */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Child Selector */
+.skill-list > span {
+    background-color: #eef0ff;
+    color: #5365c8;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover Pseudo-class */
+.skill-list > span:hover {
+    background-color: #667eea;
+    color: white;
+    cursor: pointer;
+}
+
+/* 15. Contact Section */
+.contact {
+    text-align: left;
+    margin-bottom: 25px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Adjacent Sibling Selector */
+.contact h2 + p {
+    margin-top: 5px;
+}
+
+/* Contact Paragraphs */
+.contact p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Attribute Selector */
+a[target="_blank"] {
+    text-decoration: none;
+}
+
+/* 16. Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Social Link Styling */
+.social-links a {
+    text-decoration: none;
+    color: #667eea;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Hover */
+.social-links a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Active */
+.social-links a:active {
+    color: red;
+}
+
+/* 17. Contact Button */
+.contact-button {
+    display: inline-block;
+    background: linear-gradient(
+        to right,
+        #667eea,
+        #764ba2
+    );
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.contact-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Focus State */
+.contact-button:focus-visible,
+.social-links a:focus-visible {
+    outline: 3px solid orange;
+    outline-offset: 4px;
+}
+
+/* Active State */
+.contact-button:active {
+    transform: scale(0.95);
+}
+
+/* Selection Pseudo-element */
+::selection {
+    background-color: #667eea;
+    color: white;
+}
+
+/* 18. Responsive Design */
+@media screen and (max-width: 600px) {
+
+    .profile-container {
+        padding: 15px;
+    }
+
+    .profile-card {
+        max-width: 100%;
+    }
+
+    .profile-content {
+        padding: 20px;
+    }
+
+    #profile-name {
+        font-size: 1.5rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 350px) {
+
+    .profile-content {
+        padding: 15px;
+    }
+
+    .skill-list {
+        gap: 6px;
+    }
+
+    .skill-list > span {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+}

@@ -1,0 +1,105 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Font Size */
+html {
+    font-size: 16px;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightyellow;
+    padding: 20px;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkblue;
+}
+
+/* Container */
+.container {
+    width: 100%;
+}
+
+/* Common Box */
+.box,
+.em-box,
+.rem-box,
+.vh-box,
+.vw-box,
+.vmin-box,
+.vmax-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/*Pixel Unit */
+.px-box {
+    width: 300px;
+    height: 120px;
+    background-color: blue;
+}
+
+/* Percentage Unit */
+.percentage-box {
+    width: 80%;
+    height: 120px;
+    background-color: green;
+}
+
+/* EM Unit */
+.em-box {
+    font-size: 20px;
+    width: 20em;
+    background-color: orange;
+}
+
+.em-box p {
+    font-size: 1.5em;
+}
+
+/* REM Unit */
+.rem-box {
+    width: 25rem;
+    background-color: purple;
+}
+
+.rem-box p {
+    font-size: 1.5rem;
+}
+
+/* VH Unit */
+.vh-box {
+    height: 30vh;
+    background-color: brown;
+}
+
+/*VW Unit */
+.vw-box {
+    width: 50vw;
+    background-color: crimson;
+}
+
+/* VMIN Unit */
+.vmin-box {
+    width: 30vmin;
+    height: 20vmin;
+    background-color: teal;
+}
+
+/*VMAX Unit */
+.vmax-box {
+    width: 40vmax;
+    height: 15vmax;
+    background-color: darkslateblue;
+}

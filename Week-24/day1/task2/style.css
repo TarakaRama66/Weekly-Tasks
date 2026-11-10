@@ -1,0 +1,64 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+/* Element Selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightyellow;
+}
+/* Class Selector */
+.info {
+    color: blue;
+    font-size: 18px;
+}
+/* ID Selector */
+#special {
+    color: red;
+}
+/* Grouping Selector */
+h1, h2, h3 {
+    color: darkblue;
+}
+/* Descendant Selector */
+.container p {
+    background-color: lightblue;
+}
+/* Child Selector */
+.container > h3 {
+    color: green;
+}
+/* Adjacent Sibling Selector */
+h2 + ul {
+    background-color: lightgreen;
+}
+/* General Sibling Selector */
+h2 ~ p {
+    color: brown;
+}
+/* Attribute Selector */
+a[target="_blank"] {
+    color: red;
+    font-weight: bold;
+}
+/* Attribute Selector */
+a[href] {
+    text-decoration: none;
+}
+/* Element and Class Selector */
+p.info {
+    border: 2px solid blue;
+}
+/* Descendant Selector */
+.contact p {
+    font-size: 16px;
+    color: purple;
+}
+/*Hover Selector */
+button:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}

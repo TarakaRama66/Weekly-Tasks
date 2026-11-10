@@ -1,0 +1,102 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightyellow;
+    padding: 20px;
+}
+/* Main Heading */
+h1 {
+    text-align: center;
+    color: darkblue;
+    margin-bottom: 25px;
+}
+/* Container */
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+/* Section Headings */
+h2 {
+    color: darkgreen;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+/* Hover */
+.hover-btn {
+    padding: 12px 25px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.hover-btn:hover {
+    background-color: green;
+    transform: scale(1.1);
+}
+/* Focus */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid gray;
+}
+input[type="text"]:focus {
+    border-color: blue;
+    outline: none;
+    background-color: lightyellow;
+}
+/* Active */
+.active-btn {
+    padding: 12px 25px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.active-btn:active {
+    background-color: red;
+    transform: scale(0.95);
+}
+/* First Child */
+.first-list li:first-child {
+    color: red;
+    font-weight: bold;
+}
+/* Last Child */
+.last-list li:last-child {
+    color: green;
+    font-weight: bold;
+}
+/* Nth Child */
+.nth-list li:nth-child(3) {
+    color: blue;
+    font-weight: bold;
+}
+/* Even Child */
+.nth-list li:nth-child(even) {
+    background-color: lightgray;
+}
+/* Odd Child */
+.nth-list li:nth-child(odd) {
+    padding: 8px;
+}
+/* First of Type */
+.type-box p:first-of-type {
+    color: purple;
+    font-weight: bold;
+}
+/*Checked */
+input[type="checkbox"]:checked {
+    accent-color: green;
+}
+/* Disabled */
+button:disabled {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+}

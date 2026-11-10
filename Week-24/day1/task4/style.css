@@ -1,0 +1,100 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightyellow;
+    padding: 20px;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    color: darkblue;
+    margin-bottom: 25px;
+}
+
+/* Container */
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Heading Styling */
+h2 {
+    color: darkgreen;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Font Family */
+.font-family {
+    font-family: Georgia, serif;
+}
+
+/* Font Size */
+.font-size {
+    font-size: 25px;
+}
+
+/* Font Weight */
+.font-weight {
+    font-weight: bold;
+}
+
+/* Font Style */
+.font-style {
+    font-style: italic;
+}
+
+/* Text Alignment */
+.text-align {
+    text-align: center;
+}
+
+/* Text Decoration */
+.underline {
+    text-decoration: underline;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+/* Text Transformation */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* Letter Spacing */
+.letter-spacing {
+    letter-spacing: 5px;
+}
+
+/* Word Spacing */
+.word-spacing {
+    word-spacing: 10px;
+}
+
+/* Line Height */
+.line-height {
+    line-height: 2;
+}
