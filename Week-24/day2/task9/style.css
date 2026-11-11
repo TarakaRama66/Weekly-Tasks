@@ -1,0 +1,102 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Main Grid Layout */
+.dashboard {
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    grid-template-rows: 80px 1fr 180px 60px;
+
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "sidebar content"
+        "footer footer";
+
+    gap: 15px;
+    min-height: 600px;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+}
+
+/* Main Content */
+.main {
+    grid-area: main;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Recent Activities */
+.content {
+    grid-area: content;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto;
+
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "content"
+            "footer";
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}

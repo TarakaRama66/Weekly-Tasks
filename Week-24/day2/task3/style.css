@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/* Block */
+.block {
+    display: block;
+    background-color: lightblue;
+    padding: 15px;
+    margin: 10px;
+}
+
+/* Inline */
+.inline {
+    display: inline;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+/* Inline Block */
+.inline-block {
+    display: inline-block;
+    width: 120px;
+    height: 80px;
+    background-color: orange;
+    margin: 10px;
+    text-align: center;
+    line-height: 80px;
+}
+
+/* Flex */
+.flex-container {
+    display: flex;
+    gap: 15px;
+}
+
+.flex-container div {
+    background-color: lightcoral;
+    padding: 20px;
+}
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+}
+
+.grid-container div {
+    background-color: lightpink;
+    padding: 20px;
+}
+
+/* None */
+.hidden {
+    display: none;
+}

@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 150px;
+    background-color: lightblue;
+}
+
+.box1 {
+    margin: 20px;
+}
+
+.box2 {
+    padding: 30px;
+}
+
+.box3 {
+    border: 5px solid red;
+}
+
+.box4 {
+    padding: 20px;
+    border: 5px solid green;
+    box-sizing: border-box;
+}
