@@ -1,0 +1,83 @@
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+main {
+    padding: 20px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.card {
+    background-color: #3498db;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+/* Mobile Screens */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+    header p {
+        font-size: 14px;
+    }
+    .card {
+        background-color: #e67e22;
+        padding: 20px;
+    }
+}
+/* Tablet Screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 30px;
+    }
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        background-color: #27ae60;
+    }
+}
+/* Desktop Screens */
+@media screen and (min-width: 1025px) {
+    header h1 {
+        font-size: 40px;
+    }
+    main {
+        max-width: 1200px;
+        margin: auto;
+    }
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .card {
+        background-color: #8e44ad;
+    }
+}

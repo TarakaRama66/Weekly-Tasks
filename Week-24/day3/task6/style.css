@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+}
+header {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+/* Descendant Selector */
+.student-list p {
+    padding: 12px;
+    background-color: white;
+    margin: 5px;
+}
+/* Child Selector */
+.student-list > p:first-child {
+    background-color: lightblue;
+}
+/* Adjacent Sibling Selector */
+h2 + .student-list {
+    border: 2px solid blue;
+}
+/* General Sibling Selector */
+h2 ~ form {
+    margin-top: 15px;
+}
+/* Attribute Selector */
+input[type="email"] {
+    border: 2px solid green;
+}
+/* Attribute Selector */
+input[required] {
+    background-color: #fff7ed;
+}
+/* Pseudo-class Selectors */
+input:focus {
+    outline: 2px solid blue;
+}
+button:hover {
+    background-color: green;
+    color: white;
+}
+button:active {
+    transform: scale(0.95);
+}
+/* Structural Pseudo-classes */
+.student-list p:nth-child(odd) {
+    color: blue;
+}
+.student-list p:nth-child(even) {
+    color: red;
+}
+/* First and Last Child */
+.product:first-child {
+    background-color: lightgreen;
+}
+.product:last-child {
+    background-color: lightcoral;
+}
+/* Pseudo-elements */
+h2::before {
+    content: "★ ";
+    color: orange;
+}
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: blue;
+    margin-top: 5px;
+}
+/* Grouping Selector */
+h1, h2, button {
+    font-weight: bold;
+}
+/* Products */
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+.product {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+/* Negation Selector */
+.product:not(:first-child) {
+    border: 2px solid #2563eb;
+}
+/* Responsive */
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        margin: 10px;
+    }
+}

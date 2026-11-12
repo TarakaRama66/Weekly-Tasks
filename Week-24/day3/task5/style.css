@@ -1,0 +1,107 @@
+/* CSS Variables */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #172554;
+    --background-color: #f1f5f9;
+    --text-color: #333333;
+    --white-color: #ffffff;
+    --main-font: Arial, sans-serif;
+    --small-spacing: 10px;
+    --medium-spacing: 20px;
+    --large-spacing: 40px;
+
+    --border-radius: 10px;
+    --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--main-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+/* Navbar */
+.navbar {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: var(--medium-spacing);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar nav {
+    display: flex;
+    gap: var(--medium-spacing);
+}
+.navbar a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+/* Hero */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: var(--large-spacing);
+}
+.hero h2 {
+    margin-bottom: var(--medium-spacing);
+}
+.hero button {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: none;
+    padding: var(--small-spacing) var(--medium-spacing);
+    margin-top: var(--medium-spacing);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+/* Services */
+.services {
+    padding: var(--large-spacing);
+    text-align: center;
+}
+.container {
+    display: flex;
+    gap: var(--medium-spacing);
+    margin-top: var(--medium-spacing);
+}
+.card {
+    flex: 1;
+    background-color: var(--white-color);
+    padding: var(--large-spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--small-spacing);
+}
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: var(--medium-spacing);
+}
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: var(--medium-spacing);
+    }
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .hero {
+        padding: var(--medium-spacing);
+    }
+}
