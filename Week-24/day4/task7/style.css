@@ -1,0 +1,61 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #333;
+}
+/* Header */
+header {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+/* Common Text Styles */
+h1,
+h2 {
+    margin-bottom: 15px;
+}
+p {
+    line-height: 1.6;
+}
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px 20px;
+}
+/* Reusable Card */
+.card {
+    width: 250px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #00000020;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+}
+/* Reusable Button */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: royalblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: crimson;
+}

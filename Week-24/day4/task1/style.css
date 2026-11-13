@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+h1 {
+    color: #333;
+}
+.container {
+    margin: 50px auto;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    border-radius: 10px;
+    animation: moveBox 3s infinite;
+}
+@keyframes moveBox {
+    0% {
+        transform: translateX(0);
+        background-color: royalblue;
+    }
+    50% {
+        transform: translateX(300px);
+        background-color: orange;
+    }
+    100% {
+        transform: translateX(0);
+        background-color: crimson;
+    }
+}

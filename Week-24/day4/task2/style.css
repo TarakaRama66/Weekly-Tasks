@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    text-align: center;
+}
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+.box {
+    width: 120px;
+    height: 80px;
+    margin: 25px 0;
+    background: royalblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+/* Animation Duration */
+.box1 {
+    animation: move 3s ease;
+}
+/* Animation Delay */
+.box2 {
+    animation: move 3s ease 2s;
+}
+/* Animation Iteration Count */
+.box3 {
+    animation: move 3s ease 1s infinite;
+}
+/* Animation Direction */
+.box4 {
+    animation: move 3s ease infinite alternate;
+}
+@keyframes move {
+    from {
+        transform: translateX(0);
+        background: royalblue;
+    }
+    to {
+        transform: translateX(250px);
+        background: crimson;
+    }
+}

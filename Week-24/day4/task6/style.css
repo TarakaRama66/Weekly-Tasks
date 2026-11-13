@@ -1,0 +1,89 @@
+/* CSS Variables */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #f97316;
+    --dark-color: #1e293b;
+    --light-color: #f1f5f9;
+    --white-color: #ffffff;
+    --main-spacing: 30px;
+    --card-radius: 12px;
+    --main-shadow: 0 5px 15px #00000020;
+    --main-transition: 0.3s ease;
+}
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+/* Header */
+.header {
+    background: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 40px;
+}
+.header h1 {
+    margin-bottom: 10px;
+}
+/* Reusable Container */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--main-spacing);
+    padding: 50px 20px;
+}
+/* Reusable Card Class */
+.card {
+    width: 280px;
+    padding: 25px;
+    background: var(--white-color);
+    border-radius: var(--card-radius);
+    box-shadow: var(--main-shadow);
+    text-align: center;
+    transition: var(--main-transition);
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.card p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* Reusable Button Class */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.btn:hover {
+    transform: scale(1.08);
+    opacity: 0.85;
+}
+/* Button Variations */
+.btn-primary {
+    background: var(--primary-color);
+}
+.btn-secondary {
+    background: var(--secondary-color);
+}
+/* Footer */
+.footer {
+    background: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px;
+}

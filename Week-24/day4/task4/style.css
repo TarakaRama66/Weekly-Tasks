@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4f9;
+    text-align: center;
+    padding: 30px;
+}
+h1 {
+    color: #222;
+    margin-bottom: 40px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.box {
+    width: 280px;
+    min-height: 230px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #ccc;
+}
+.box h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+/* Interactive Button */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background: royalblue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.btn:hover {
+    background: crimson;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px #aaa;
+}
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.drop-btn {
+    padding: 12px 20px;
+    background: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 160px;
+    background: white;
+    box-shadow: 0 5px 12px #aaa;
+    border-radius: 6px;
+    z-index: 1;
+}
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+}
+.dropdown-content a:hover {
+    background: #e5e5e5;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    background: #222;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.tooltip-text {
+    visibility: hidden;
+    width: 140px;
+    background: crimson;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+/* Profile Card */
+.card {
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px #aaa;
+}
+.profile {
+    text-align: center;
+}
+.avatar {
+    width: 60px;
+    height: 60px;
+    background: royalblue;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 25px;
+}
+.profile h3 {
+    margin: 15px 0 10px;
+}
+.profile p {
+    margin-bottom: 20px;
+    color: #666;
+}
